@@ -10,10 +10,13 @@
       @change="changeHandler"
       class="bottom-bar"
     ></cube-tab-bar>
+    <span class="sum-of-cart" v-show="sumOfCart">{{sumOfCart}}</span>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {
@@ -67,6 +70,11 @@ export default {
       }
     }
   },
+  computed: {
+    ...mapGetters({
+      sumOfCart: "sumOfCart"
+    })
+  },
   created() {
     switch (this.$route.path) {
       case "/bottombar/classify":
@@ -103,4 +111,16 @@ export default {
     padding-top 0.3em
   i
     font-size 1em
+.sum-of-cart
+  position fixed
+  bottom 1rem
+  border-radius 0.15rem
+  right 23%
+  width 0.3rem
+  height 0.3rem
+  line-height 0.3rem
+  font-size 0.2rem
+  background-color red
+  color #fff
+  z-index 1001
 </style>

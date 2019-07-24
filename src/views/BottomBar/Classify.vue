@@ -12,9 +12,12 @@
     </cube-scroll>
     <cube-scroll class="rightpanel">
       <ul>
-        <li v-for="(product, index) in productLists" :key="index" @click="selectProduct(index)">
+        <li v-for="(product, index) in productLists" :key="index">
           <img :src="product.image" :alt="product.label" />
-          <p>{{product.label}}</p>
+          <p>
+            {{product.label}}
+            <i class="cubeic-add" @click="addToCart(product.label)"></i>
+          </p>
         </li>
       </ul>
     </cube-scroll>
@@ -100,6 +103,10 @@ export default {
         }
       });
       this.getClassify(index);
+    },
+    addToCart(label) {
+      // TODO:
+      this.$store.commit("addToCartLists", label);
     },
     async getClassify(index) {
       const result = await this.$http.get("/api/classify", {

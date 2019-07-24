@@ -41,16 +41,12 @@ export default {
       const rollinglists = await this.$http.get("/api/rollinglist");
       this.rollinglists = rollinglists.data;
     } catch (err) {
-      console.log(err);
+      console.log("请求主页数据错误", err);
     }
   },
   methods: {
-    changePage(current) {
-      // console.log("当前轮播图序号为:" + current);
-    },
-    clickHandler(item, index) {
-      console.log(item, index);
-    }
+    changePage(current) {},
+    clickHandler(item, index) {}
   }
 };
 </script>

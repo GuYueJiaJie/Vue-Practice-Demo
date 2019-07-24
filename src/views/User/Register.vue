@@ -85,9 +85,7 @@ export default {
         .get("/api/register", {
           params: this.model
         })
-        .then(res => {
-          console.log(res);
-        })
+        .then(res => {})
         .catch(err => {
           console.log("AJAX请求出错");
           console.log(err);
@@ -114,8 +112,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.headerimg {
-  height: 150px;
-  width: 100%;
-}
+.headerimg
+  height 150px
+  width 100%
 </style>

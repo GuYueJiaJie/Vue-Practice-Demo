@@ -85,12 +85,11 @@ export default {
         });
         // code=0表示登陆成功
         if (!result.code) {
-          console.log(result);
           this.setToken(result.token);
           window.sessionStorage.setItem("token", result.token);
-          console.log(this.$route.query.redirect);
           // 增加登陆成功提示
           if (this.$route.query.redirect) {
+            // 如果query参数中有redirect
             this.$router.replace({ path: this.$route.query.redirect });
           }
         } else {
