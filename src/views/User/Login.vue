@@ -50,7 +50,7 @@ export default {
               placeholder: "请输入您的密码",
               type: "password",
               eye: {
-                open: true
+                open: false
               }
             },
             rules: {
@@ -91,6 +91,8 @@ export default {
           if (this.$route.query.redirect) {
             // 如果query参数中有redirect
             this.$router.replace({ path: this.$route.query.redirect });
+          } else {
+            this.$router.replace("/bottombar/index");
           }
         } else {
           alert(result.message);

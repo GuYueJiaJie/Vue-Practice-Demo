@@ -28,29 +28,42 @@ const router = new Router({
         {
           path: "/user/register",
           name: "register",
-          component: () => import("./views/User/Register.vue")
+          component: () =>
+            import(/* webpackChunkName: "user" */ "./views/User/Register.vue")
         }
       ]
     },
     {
       path: "/bottombar",
       name: "bottombar",
-      component: () => import("./views/BottomBar/BottomBar.vue"),
+      component: () =>
+        import(
+          /* webpackChunkName: "bottombar" */ "./views/BottomBar/BottomBar.vue"
+        ),
       children: [
         {
           path: "index",
           name: "index",
-          component: () => import("./views/BottomBar/index.vue")
+          component: () =>
+            import(
+              /* webpackChunkName: "bottombar" */ "./views/BottomBar/index.vue"
+            )
         },
         {
           path: "classify",
           name: "classify",
-          component: () => import("./views/BottomBar/Classify.vue")
+          component: () =>
+            import(
+              /* webpackChunkName: "bottombar" */ "./views/BottomBar/Classify.vue"
+            )
         },
         {
           path: "search",
           name: "search",
-          component: () => import("./views/BottomBar/Search.vue")
+          component: () =>
+            import(
+              /* webpackChunkName: "bottombar" */ "./views/BottomBar/Search.vue"
+            )
         },
         {
           path: "cart",
@@ -58,7 +71,10 @@ const router = new Router({
           meta: {
             requiresAuth: true // 需要登录验证
           },
-          component: () => import("./views/BottomBar/Cart.vue")
+          component: () =>
+            import(
+              /* webpackChunkName: "bottombar" */ "./views/BottomBar/Cart.vue"
+            )
         },
         {
           path: "mine",
@@ -66,7 +82,10 @@ const router = new Router({
           meta: {
             requiresAuth: true // 需要登录验证
           },
-          component: () => import("./views/BottomBar/Mine.vue")
+          component: () =>
+            import(
+              /* webpackChunkName: "bottombar" */ "./views/BottomBar/Mine.vue"
+            )
         }
       ]
     }
