@@ -96,7 +96,7 @@ export default {
           alert(result.message);
         }
       } catch (err) {
-        console.log(err);
+        alert(err);
       }
     },
     // getQueryString(name) {

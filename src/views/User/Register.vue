@@ -87,8 +87,8 @@ export default {
         })
         .then(res => {})
         .catch(err => {
-          console.log("AJAX请求出错");
-          console.log(err);
+          alert("AJAX请求出错");
+          // console.log(err);
         });
       // 原生AJAX
       // var xhr = new XMLHttpRequest();

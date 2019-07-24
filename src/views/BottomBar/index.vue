@@ -41,7 +41,7 @@ export default {
       const rollinglists = await this.$http.get("/api/rollinglist");
       this.rollinglists = rollinglists.data;
     } catch (err) {
-      console.log("请求主页数据错误", err);
+      // console.log("请求主页数据错误", err);
     }
   },
   methods: {

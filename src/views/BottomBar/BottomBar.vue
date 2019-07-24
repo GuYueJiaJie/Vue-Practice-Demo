@@ -114,12 +114,12 @@ export default {
 .sum-of-cart
   position fixed
   bottom 1rem
-  border-radius 0.15rem
+  border-radius 0.2rem
   right 23%
-  width 0.3rem
-  height 0.3rem
-  line-height 0.3rem
-  font-size 0.2rem
+  width 0.4rem
+  height 0.4rem
+  line-height 0.4rem
+  font-size 0.3rem
   background-color red
   color #fff
   z-index 1001

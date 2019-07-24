@@ -5,8 +5,8 @@ module.exports = {
       before: function(app) {
         // 用户信息池
         let userInfos = [
-          { username: "guyuejiajie", password: "123456" },
-          { username: "guyuejiajie1", password: "123456" }
+          { username: "jingdong", password: "123456" },
+          { username: "jingdong1", password: "123456" }
         ];
         app.get("/api/register", (req, res) => {
           const { username } = req.query;
